@@ -8,8 +8,10 @@ func main() {
 
 	}
 
-	a := 4
-	if a == 3 {
+	b := 4
+
+	// a is short scoped variable
+	if a := b; a == 3 {
 		fmt.Println("a is 3")
 	} else if a == 2 {
 		fmt.Println("a is 2")
@@ -19,7 +21,8 @@ func main() {
 		fmt.Println("Default")
 	}
 
-	switch a {
+	// a is short scoped variable
+	switch a := b; a {
 	case 3:
 		fmt.Println("a is 3")
 	case 2:
